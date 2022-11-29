@@ -111,11 +111,7 @@ if (a+b>15) {
 
 // Задание №2
 function compare(a, b) {
-    if (a===b) {
-        console.log(true);
-    } else {
-        console.log(false);
-    }
+    console.log(a===b);
 }
 let c = 22;
 let d = 22;
