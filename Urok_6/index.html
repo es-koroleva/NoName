@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<label for="num1">
+    <input type="text" name="num1" id="num1">
+</label>
+<div id="operator btn">
+    <button id="plus" onclick="op='+'">+</button>
+    <button id="minus" onclick="op='-'">-</button>
+    <button id="multiplication" onclick="op='*'">*</button>
+    <button id="division" onclick="op='/'">/</button>
+</div>
+<label for="num2">
+    <input type="text" id="num2">
+</label>
+<br>
+<button onclick="func()">Посчитать</button>
+<p id="result"></p>
+<script src="main.js"></script>
+</body>
+</html>
