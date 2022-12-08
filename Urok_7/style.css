@@ -1,0 +1,35 @@
+/*.divs {*/
+/*    width: 1000px;*/
+/*    height: 500px;*/
+/*}*/
+
+/*.dark {*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
+
+.btn {
+    margin-bottom: 10px;
+}
+
+.text {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ACF2D1;
+    color: midnightblue;
+}
+
+h1 {
+    margin: 0;
+}
+
+section div button {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+section input {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
