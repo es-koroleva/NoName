@@ -1,0 +1,44 @@
+/*.black {*/
+/*    background-color: black;*/
+/*    color: green;*/
+/*}*/
+
+/*.one2 {*/
+/*    background-color: black;*/
+/*    color: red;*/
+/*}*/
+
+/*.two {*/
+/*    margin-left: 200px;*/
+/*}*/
+
+/*.konoha {*/
+/*    padding: 200px;*/
+/*}*/
+
+/*.naruto {*/
+/*    font-size: 100px;*/
+/*}*/
+
+/*Задание №1:*/
+.msk {
+    padding: 5px;
+    color: white;
+    font-size: 25px;
+}
+
+/*Задание №2-3*/
+.class1 {
+    background-color: aqua;
+    width: auto;
+    height: auto;
+}
+
+.class2 {
+    font-weight: bold;
+}
+
+.class3 {
+    padding: 5px;
+}
+
