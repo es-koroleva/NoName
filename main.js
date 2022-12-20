@@ -1,76 +1,126 @@
-// УРОК 2
+(() => {
+    // Объект SET
+    // let a = new Set();              // создается объект Set (должен быть уникальным)
+    // a.add(666);                     // метод add - создает новый объект в Set
+    // a.add(888);
+    // a.add(888);
+    // a.add('Это строка');
+    // a.add(true);
+    // // a.clear();                       // метод clear - удаляет все имеющиеся значения
+    // a.delete(666);                   //метод delete - уаляет значение
 
-// let number = '02';      // числовой тип
-// console.log(number);
-//
-// let month = 'Февраль';
-// console.log(month);        // Строчный тип
-//
-// let hello = `Добро ${"пожаловать"} ${"на курс,"} ${"Евгения"}`;
-// console.log(hello);
-//
-// // alert("11.2022");
-//
-// document.getElementById("one").innerHTML = "Hello World!>";
-//
-// typeof undefined;
-// console.log(typeof undefined);                  // undefined
-// typeof 0;
-// console.log(typeof 0);                          // Number
-// typeof 12n;
-// console.log(typeof 12n);                        // BigInt
-// typeof true
-// console.log(typeof true);                       // Boolean
-// typeof 'Hello';
-// console.log(typeof 'Hello')                     // String
-// typeof Symbol('id');
-// console.log(typeof Symbol('id'))                // Symbol
-// typeof null;
-// console.log(typeof null);                       // Objects
+    // // let b = [1,2,3,4,5,6,7,8,9,1,2,5,4,3,3,2,2,];
+    // // console.log(b);
+    // console.log(a);
+    // console.log(a.has(666));    // has - возвращает true, если такое значение есть в set
 
-// УРОК 3
+    // FOR OF; FOR; FOR IN
+    // 1 способ
 
-document.getElementById("one").innerHTML = "<h1>Hello World!</h1>";
-// let inputIN = document.querySelector(".text");
-// let btn = document.querySelector(".btn");
-// let div = document.querySelector(".out");
-// btn.onclick = function () {
-//     console.log("Da");
-//     console.log(inputIN.value);
-//     let e = inputIN.value;
-//     console.log(e);
-//     div.innerHTML = e;
-// };
+    // let b = [1,2,3,4,5,5,5,6,6,6,7,8,9,5,4,2,5,6,6,6,1,1,1,2];
+    // let a = new Set(b);
+    // let arr = Array.from(a);
+    // console.log(arr);
 
-// let myBirthDay = prompt('Когда у тебя день рождения?');
-// console.log(myBirthDay);
-//
-// if (myBirthDay == 22) {
-//     alert("Да ты молод бро!");
-// } else if (myBirthDay == 23) {
-//     alert("Ты крут");
-// } else if (myBirthDay >= 33) {
-//     alert("От тебя уже веет старостью");
-// } else if (myBirthDay == 63) {
-//     alert("Тебе пора на пенсию");
-// } else if (myBirthDay == "") {
-//     alert("Введи что-нибудь");
-// } else {
-//     alert("Фууу, старик!");
-// }
+    // 2 способ
+    // let b = [1,2,3,4,5,5,5,6,6,6,7,8,9,5,4,2,5,6,6,6,1,1,1,2];
+    // let a = new Set(b);
+    // for (let i of a) {
+    //     console.log(i);
+    // }
+    // for (let i = 0; b.length > i; i++) {
+    //     console.log(b[i]);
+    // }
 
-let myBirthDay = prompt('Загадайте число от 1 до 200');
+    // 3 способ (в качестве ключей - индексы)
+    // let b = [1,2,3,4,5,5,5,6,6,6,7,8,9,5,4,2,5,6,6,6,1,1,1,2];
+    // for (let key in b) {
+    //     console.log(b[key]);
+    // }
 
-if (myBirthDay > 100) {
-    document.querySelector(".out").innerHTML = myBirthDay;
-} else {
-    console.log(myBirthDay);
-}
+    // 4 способ (в качестве ключей - значения)
+    // let b = [1,2,3,4,5,5,4,3,2,2,3]
+    // for (let key of b) {
+    //     console.log(key);
+    // }
 
+    // ЗАДАНИЕ №1
+    let a = new Set();
+    a.add('e');
+    a.add('r');
+    a.add('i');
+    a.add('k');
+    a.add('t');
+    a.add('h');
+    a.add('e');
+    a.add('b');
+    a.add('e');
+    a.add('s');
+    a.add('t');
+    console.log(a);
 
+    // ЗАДАНИЕ №2-3
+    let btn1 = document.querySelector('.btn1');
+    let btn2 = document.querySelector('.btn2');
+    let inputText = document.getElementById('input-text');
 
+    btn1.onclick = function () {
+        if (inputText.value === '') {
+            alert('Заполни меня');
+            return;
+        }
+        a.add(inputText.value);
+        inputText.value = '';
+        console.log(a);
+    }
 
+    // ЗАДАНИЕ №3
+    // 1 вариант решения
+    btn2.onclick = function () {
+        let userValue = inputText.value;
+        document.querySelector('.out-text').innerHTML = `${a.has(userValue)}`;
+    }
 
+    // 2 вариант решения
+    // btn2.onclick = function () {
+    //     let userValue = inputText.value;
+    //     let f = false;
+    //     for (let b of a) {
+    //         if (b === userValue) {
+    //             f = true;
+    //             break;
+    //         }
+    //     }
+    //     document.querySelector('.out-text').innerHTML = `${f}`;
+    // }
 
+    // 3 вариант решения
+    // btn2.onclick = function () {
+    //     let userValue = inputText.value;
+    //     document.querySelector('.out-text').innerHTML = `${checkValue(userValue)}`;
+    //
+    //     function checkValue(value) {
+    //         for (let b of a) {
+    //             if (b === value) {
+    //                 return true;
+    //             }
+    //         }
+    //         return false;
+    //     }
+    // }
 
+    //ЗАДАНИЕ №4
+    let btn3 = document.querySelector('.btn3');
+    let c = [1, 3, 10, 5, 8, 2, 11, 7, 3, 4, 9, 15, 4, 2, 2, 1];
+    btn3.onclick = function () {
+        let d = new Set();
+        for (let i of c) {
+            if (i > 5) {
+                d.add(i);
+            }
+        }
+        let arr = Array.from(d);
+        document.querySelector('.out-text2').textContent = arr.join(', ');
+    }
 
+}) ();
